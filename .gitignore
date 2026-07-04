@@ -18,7 +18,6 @@ env.bak/
 venv.bak/
 
 # Machine Learning Models and Data
-api/models/*.pkl
 ml_model/*.csv
 
 # OS generated files
