@@ -17,8 +17,9 @@ function App() {
     e.preventDefault();
     setLoading(true);
     try {
-      // Assuming backend runs on port 8001
-      const res = await axios.post('http://localhost:8001/predict', formData);
+      // Use the environment variable for production, or fallback to localhost for local development
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:8001';
+      const res = await axios.post(`${apiUrl}/predict`, formData);
       setPrediction(res.data.PredictedScore);
     } catch (error) {
       console.error(error);
