@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0B1120;
+  --color-card: rgba(30, 41, 59, 0.5);
+}
+
+@layer base {
+  body {
+    @apply bg-background text-white antialiased selection:bg-blue-500/30;
+  }
+}
